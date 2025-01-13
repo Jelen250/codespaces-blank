@@ -1,0 +1,50 @@
+/* Resetování marginu a paddingu */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Nastavení základního vzhledu */
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #000;
+    animation: blinkBackground 2s infinite; /* Animace pozadí */
+}
+
+/* Animace pro blikající pozadí */
+@keyframes blinkBackground {
+    0% {
+        background-color: #FF0000; /* Červená */
+    }
+    25% {
+        background-color: #FFFF00; /* Žlutá */
+    }
+    50% {
+        background-color: #00FF00; /* Zelená */
+    }
+    75% {
+        background-color: #0000FF; /* Modrá */
+    }
+    100% {
+        background-color: #FF0000; /* Červená */
+    }
+}
+
+/* Styl pro nadpis */
+h1 {
+    color: white;
+    font-size: 3em;
+}
+
+/* Styl pro odstavec */
+p {
+    color: white;
+    font-size: 1.5em;
+    margin-top: 20px;
+}
