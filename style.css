@@ -36,22 +36,21 @@ body {
     }
 }
 
-/* Styl pro nadpis */
+
 h1 {
     color: white;
     font-size: 3em;
 }
 
-/* Styl pro odstavec */
+
 p {
     color: white;
     font-size: 1.5em;
     margin-top: 20px;
 }
-  /* Zvětšení obrázku */
+  
   img {
-    width: 80%; /* Zvětší obrázek na 80% šířky obrazovky */
-    height: auto; /* Udržuje proporce obrázku */
-    display: block; /* Zajistí, že obrázek bude blokový element */
-    margin-top: 20px; /* Přidá mezeru nad obrázek */
-}
+    width: 80%; 
+    height: auto; 
+    display: block; 
+    margin-top: 20px;
