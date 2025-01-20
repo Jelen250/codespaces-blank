@@ -21,7 +21,7 @@
             align-items: center;      /* Horizontální centrování */
             text-align: center;
             background-color: #000;
-            animation: blinkBackground 2s infinite; /* Animace pozadí */
+            animation: blinkBackground 2s ease-in-out infinite; /* Animace pozadí */
         }
 
         /* Animace pro blikající pozadí */
@@ -46,19 +46,20 @@
         h1 {
             color: white;
             font-size: 3em;
+            margin-bottom: 20px; /* Mezera pod nadpisem */
         }
 
         p {
             color: white;
             font-size: 1.5em;
-            margin-top: 20px;
+            margin-top: 20px; /* Mezera nad odstavcem */
         }
 
         img {
-            width: 100%; 
-            height: auto; 
-            display: block; 
-            margin-top: 20px;
+            max-width: 100%; /* Zajišťuje, že obrázek nebude širší než stránka */
+            height: auto; /* Udržuje proporce obrázku */
+            display: block;
+            margin-top: 20px; /* Mezera nad obrázkem */
         }
     </style>
 </head>
