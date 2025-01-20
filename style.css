@@ -1,10 +1,5 @@
-<!DOCTYPE html>
-<html lang="cs">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animovaný pozadí s obrázkem</title>
-    <style>
+
+    
         /* Resetování marginu a paddingu */
         body, h1, p {
             margin: 0;
@@ -61,17 +56,4 @@
             display: block;
             margin-top: 20px; /* Mezera nad obrázkem */
         }
-    </style>
-</head>
-<body>
-    <h1>Příklad stránky s animovaným pozadím</h1>
-    <p>Text nad obrázkem</p>
-    <img src="obrazek.jpg" alt="Obrázek">
-    .obrazek {
-        flex: 1 1 30%; /* Každý obrázek zabírá minimálně 30% šířky kontejneru */
-        display: flex;
-        justify-content: center; /* Horizontálně centruje obrázek */
-        align-items: center; /* Vertikálně centrovaný obrázek */
-    }
-    </body>
-</html>
+   
