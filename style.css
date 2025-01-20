@@ -2,14 +2,12 @@
 body, h1, p {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 /* Nastavení základního vzhledu */
 body {
     font-family: Arial, sans-serif;
     height: 100vh;
-    display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
