@@ -1,55 +1,70 @@
-/* Resetování marginu a paddingu */
-body, h1, p {
-    margin: 0;
-    padding: 0;
-}
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animovaný pozadí s obrázkem</title>
+    <style>
+        /* Resetování marginu a paddingu */
+        body, h1, p {
+            margin: 0;
+            padding: 0;
+        }
 
-/* Nastavení základního vzhledu */
-body {
-    font-family: Arial, sans-serif;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-color: #000;
-    animation: blinkBackground 2s infinite; /* Animace pozadí */
-}
+        /* Nastavení základního vzhledu */
+        body {
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: flex;            /* Použití Flexboxu */
+            flex-direction: column;   /* Zobrazení elementů pod sebou */
+            justify-content: center;  /* Vertikální centrování */
+            align-items: center;      /* Horizontální centrování */
+            text-align: center;
+            background-color: #000;
+            animation: blinkBackground 2s infinite; /* Animace pozadí */
+        }
 
-/* Animace pro blikající pozadí */
-@keyframes blinkBackground {
-    0% {
-        background-color: #FF0000; /* Červená */
-    }
-    25% {
-        background-color: #FFFF00; /* Žlutá */
-    }
-    50% {
-        background-color: #00FF00; /* Zelená */
-    }
-    75% {
-        background-color: #0000FF; /* Modrá */
-    }
-    100% {
-        background-color: #FF0000; /* Červená */
-    }
-}
+        /* Animace pro blikající pozadí */
+        @keyframes blinkBackground {
+            0% {
+                background-color: #FF0000; /* Červená */
+            }
+            25% {
+                background-color: #FFFF00; /* Žlutá */
+            }
+            50% {
+                background-color: #00FF00; /* Zelená */
+            }
+            75% {
+                background-color: #0000FF; /* Modrá */
+            }
+            100% {
+                background-color: #FF0000; /* Červená */
+            }
+        }
 
+        h1 {
+            color: white;
+            font-size: 3em;
+        }
 
-h1 {
-    color: white;
-    font-size: 3em;
-}
+        p {
+            color: white;
+            font-size: 1.5em;
+            margin-top: 20px;
+        }
 
-
-p {
-    color: white;
-    font-size: 1.5em;
-    margin-top: 20px;
-}
-  
-  img {
-    width: 100%; 
-    height: auto; 
-    display: block; 
-    margin-top: 20px;
-  }
+        img {
+            width: 100%; 
+            height: auto; 
+            display: block; 
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Příklad stránky s animovaným pozadím</h1>
+    <p>Text nad obrázkem</p>
+    <img src="obrazek.jpg" alt="Obrázek">
+</body>
+</html>
