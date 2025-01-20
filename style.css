@@ -56,4 +56,12 @@
             display: block;
             margin-top: 20px; /* Mezera nad obrázkem */
         }
-   
+        footer {
+            background-color: #4CAF50; /* Mění barvu pozadí (zelená) */
+            color: white; /* Barva textu */
+            text-align: center; /* Zarovnání textu na střed */
+            padding: 10px; /* Vnitřní okraje */
+            position: relative;
+            bottom: 0;
+            width: 100%;
+          }
