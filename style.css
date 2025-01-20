@@ -67,5 +67,11 @@
     <h1>Příklad stránky s animovaným pozadím</h1>
     <p>Text nad obrázkem</p>
     <img src="obrazek.jpg" alt="Obrázek">
-</body>
+    .obrazek {
+        flex: 1 1 30%; /* Každý obrázek zabírá minimálně 30% šířky kontejneru */
+        display: flex;
+        justify-content: center; /* Horizontálně centruje obrázek */
+        align-items: center; /* Vertikálně centrovaný obrázek */
+    }
+    </body>
 </html>
