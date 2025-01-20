@@ -48,3 +48,10 @@ p {
     font-size: 1.5em;
     margin-top: 20px;
 }
+  /* Zvětšení obrázku */
+  img {
+    width: 80%; /* Zvětší obrázek na 80% šířky obrazovky */
+    height: auto; /* Udržuje proporce obrázku */
+    display: block; /* Zajistí, že obrázek bude blokový element */
+    margin-top: 20px; /* Přidá mezeru nad obrázek */
+}
