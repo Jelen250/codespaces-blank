@@ -7,103 +7,105 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <style>
-        /* Flexbox styling for images on the right side of the page */
-        .image-container {
+        /* Flexbox styling for main content */
+        .content-container {
             display: flex;
-            flex-direction: column; /* Stack images vertically */
-            justify-content: flex-start;
-            align-items: flex-end; /* Align images to the right */
-            width: 50%; /* Occupy half the width of the page */
-            margin-left: auto; /* Push images to the right side */
+            justify-content: space-between; /* Space between left and right sections */
+            flex-wrap: wrap; /* Allow content to wrap on smaller screens */
         }
 
+        /* Left section (menu and drink menu) */
+        .menu-section {
+            width: 50%; /* Take half the width */
+            padding: 20px;
+        }
+
+        /* Right section (images) */
+        .image-container {
+            width: 50%; /* Take half the width */
+            display: flex;
+            flex-direction: column; /* Stack images vertically */
+            align-items: flex-end; /* Align images to the right */
+            padding: 20px;
+        }
+
+        /* Make images responsive */
         .image-container img {
-            width: 100%; /* Make images responsive */
-            margin-bottom: 16px; /* Space between images */
+            width: 100%; /* Adjust image width */
+            margin-bottom: 16px; /* Add space between images */
         }
     </style>
 </head>
 <body>
     <!-- Navbar (sit on top) -->
-<div class="w3-top">
-    <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
-      <a href="#home" class="w3-bar-item w3-button">Restaurace na mráčku</a>
-      <!-- Right-sided navbar links. Hide them on small screens -->
-      <div class="w3-right w3-hide-small">
-        <a href="index.html" class="w3-bar-item w3-button">O nás</a>
-        <a href="druha_strana.html" class="w3-bar-item w3-button">Menu</a>
-        <a href="treti_strana.html" class="w3-bar-item w3-button">Kontakt</a>
-      </div>
+    <div class="w3-top">
+        <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+            <a href="#home" class="w3-bar-item w3-button">Restaurace na mráčku</a>
+            <div class="w3-right w3-hide-small">
+                <a href="index.html" class="w3-bar-item w3-button">O nás</a>
+                <a href="druha_strana.html" class="w3-bar-item w3-button">Menu</a>
+                <a href="treti_strana.html" class="w3-bar-item w3-button">Kontakt</a>
+            </div>
+        </div>
     </div>
-  </div>
 
-    <!-- Menu Section -->
-  <div class="w3-row w3-padding-64" id="menu">
-    <div class="w3-col l6 w3-padding-large">
-      <h1 class="w3-center">Menu</h1><br>
-      <h4>Chlebový košík</h4>
-      <p class="w3-text-grey">Sortiment čerstvě pečených ovocných chlebů a muffinů 137,50 Kč</p><br>
-    
-      <h4>Medovo-mandlová granola s ovocem</h4>
-      <p class="w3-text-grey">Přírodní cereálie z medem opečených ovesných vloček, rozinek, mandlí a datlí 175,00 Kč</p><br>
-    
-      <h4>Belgická vafle</h4>
-      <p class="w3-text-grey">Vanilkové těsto s ječmennou moukou 187,50 Kč</p><br>
-    
-      <h4>Míchaná vejce</h4>
-      <p class="w3-text-grey">Míchaná vejce s pečenou paprikou a česnekem, se zelenou cibulkou 187,50 Kč</p><br>
-    
-      <h4>Borůvkové palačinky</h4>
-      <p class="w3-text-grey">Se sirupem, máslem a spoustou borůvek 212,50 Kč</p>    
-     
-      <h4>Avokádový toast</h4>
-    <p class="w3-text-grey">Toust s avokádem, rajčaty, opečenými semínky a olivovým olejem, dochucený citronem a solí. 175,00 Kč</p><br>
+    <!-- Main Content: Left section for Menu and Drink Menu, Right section for Images -->
+    <div class="content-container">
+        <!-- Left section (Menu and Drink Menu) -->
+        <div class="menu-section">
+            <!-- Menu Section -->
+            <h1 class="w3-center">Menu</h1><br>
+            <h4>Chlebový košík</h4>
+            <p class="w3-text-grey">Sortiment čerstvě pečených ovocných chlebů a muffinů 137,50 Kč</p><br>
+            <h4>Medovo-mandlová granola s ovocem</h4>
+            <p class="w3-text-grey">Přírodní cereálie z medem opečených ovesných vloček, rozinek, mandlí a datlí 175,00 Kč</p><br>
+            <h4>Belgická vafle</h4>
+            <p class="w3-text-grey">Vanilkové těsto s ječmennou moukou 187,50 Kč</p><br>
+            <h4>Míchaná vejce</h4>
+            <p class="w3-text-grey">Míchaná vejce s pečenou paprikou a česnekem, se zelenou cibulkou 187,50 Kč</p><br>
+            <h4>Borůvkové palačinky</h4>
+            <p class="w3-text-grey">Se sirupem, máslem a spoustou borůvek 212,50 Kč</p><br>
+            <h4>Avokádový toast</h4>
+            <p class="w3-text-grey">Toust s avokádem, rajčaty, opečenými semínky a olivovým olejem, dochucený citronem a solí. 175,00 Kč</p><br>
+            <h4>Omeleta se šunkou a sýrem</h4>
+            <p class="w3-text-grey">Vaječná omeleta se šunkou, tvrdým sýrem, rajčaty a bylinkami. 195,00 Kč</p><br>
+            <h4>Francouzský toast s ovocem</h4>
+            <p class="w3-text-grey">Opečený toust s kousky čerstvého ovoce, podávaný s javorovým sirupem a šlehačkou. 205,00 Kč</p><br>
+            <h4>Quiche s lososem a špenátem</h4>
+            <p class="w3-text-grey">Křehká kůrka, plněná směsí špenátu, lososa, vajec a smetany. 225,00 Kč</p><br>
+            <h4>Müsli s jogurtem a medem</h4>
+            <p class="w3-text-grey">Domácí müsli s ovesnými vločkami, sušeným ovocem, ořechy a čerstvým jogurtem, pokapáno medem. 165,00 Kč</p><br>
+            <h4>Pečené zeleninové quesadillas</h4>
+            <p class="w3-text-grey">Tortilla plněná pečenou zeleninou, sýrem a kořením, podávaná s guacamole a jogurtovým dipem. 215,00 Kč</p><br>
 
-    <h4>Omeleta se šunkou a sýrem</h4>
-    <p class="w3-text-grey">Vaječná omeleta se šunkou, tvrdým sýrem, rajčaty a bylinkami. 195,00 Kč</p><br>
+            <!-- Drink Menu Section -->
+            <h1 class="w3-center">Nápojový lístek</h1><br>
+            <h4>Fresh pomerančový džus</h4>
+            <p class="w3-text-grey">Čerstvě vymačkaný pomerančový džus bez přidaného cukru. 65,00 Kč</p><br>
+            <h4>Kokosová limonáda</h4>
+            <p class="w3-text-grey">Osvěžující kokosová voda s limetkou a trochou medu. 75,00 Kč</p><br>
+            <h4>Ledový čaj s citronem</h4>
+            <p class="w3-text-grey">Domácí ledový čaj s citronem a čerstvou mátou. 70,00 Kč</p><br>
+            <h4>Káva cappuccino</h4>
+            <p class="w3-text-grey">Krémové cappuccino s našlehaným mlékem. 85,00 Kč</p><br>
+            <h4>Matcha latte</h4>
+            <p class="w3-text-grey">Lahodné latte s japonským zeleným čajem matcha. 95,00 Kč</p><br>
+            <h4>Horká čokoláda</h4>
+            <p class="w3-text-grey">Božská horká čokoláda s našlehanou smetanou. 90,00 Kč</p><br>
+        </div>
 
-    <h4>Francouzský toast s ovocem</h4>
-    <p class="w3-text-grey">Opečený toust s kousky čerstvého ovoce, podávaný s javorovým sirupem a šlehačkou. 205,00 Kč</p><br>
+        <!-- Right section (Images) -->
+        <div class="image-container">
+            <img src="https://www.w3schools.com/w3images/tablesetting.jpg" class="w3-round w3-image w3-opacity-min" alt="Menu">
+            <img src="https://dobrebio.cz/wp-content/uploads/2020/03/IMG-6376-1536x1152.jpg" class="w3-round w3-image w3-opacity-min" alt="Menu">
+            <p class="w3-text-grey">Toto je obrázek ilustrující atmosféru našeho menu. Můžete si všimnout, že v pozadí je elegantní uspořádání stolu, které odráží příjemnou atmosféru restaurace.</p>
+            <p class="w3-text-grey">Druhý obrázek ukazuje náš výběr přírodních a zdravých ingrediencí, které používáme v našich pokrmech. Tato fotografie je dokladem našich kvalitních surovin.</p>
+        </div>
+    </div>
 
-    <h4>Quiche s lososem a špenátem</h4>
-    <p class="w3-text-grey">Křehká kůrka, plněná směsí špenátu, lososa, vajec a smetany. 225,00 Kč</p><br>
-
-    <h4>Müsli s jogurtem a medem</h4>
-    <p class="w3-text-grey">Domácí müsli s ovesnými vločkami, sušeným ovocem, ořechy a čerstvým jogurtem, pokapáno medem. 165,00 Kč</p><br>
-    <h4>Pečené zeleninové quesadillas</h4>
-    <p class="w3-text-grey">Tortilla plněná pečenou zeleninou, sýrem a kořením, podávaná s guacamole a jogurtovým dipem. 215,00 Kč</p><br>
-  </div>
-  <div class="w3-col l6 w3-padding-large">
-    <h1 class="w3-center">Nápojový lístek</h1><br>
-
-    <h4>Fresh pomerančový džus</h4>
-    <p class="w3-text-grey">Čerstvě vymačkaný pomerančový džus bez přidaného cukru. 65,00 Kč</p><br>
-
-    <h4>Kokosová limonáda</h4>
-    <p class="w3-text-grey">Osvěžující kokosová voda s limetkou a trochou medu. 75,00 Kč</p><br>
-
-    <h4>Ledový čaj s citronem</h4>
-    <p class="w3-text-grey">Domácí ledový čaj s citronem a čerstvou mátou. 70,00 Kč</p><br>
-
-    <h4>Káva cappuccino</h4>
-    <p class="w3-text-grey">Krémové cappuccino s našlehaným mlékem. 85,00 Kč</p><br>
-
-    <h4>Matcha latte</h4>
-    <p class="w3-text-grey">Lahodné latte s japonským zeleným čajem matcha. 95,00 Kč</p><br>
-
-    <h4>Horká čokoláda</h4>
-    <p class="w3-text-grey">Božská horká čokoláda s našlehanou smetanou. 90,00 Kč</p><br>
-</div>
-  <!-- Image container for images placed on the right side of the page -->
-  <div class="image-container">
-    <img src="https://www.w3schools.com/w3images/tablesetting.jpg" class="w3-round w3-image w3-opacity-min" alt="Menu">
-    <img src="https://dobrebio.cz/wp-content/uploads/2020/03/IMG-6376-1536x1152.jpg" class="w3-round w3-image w3-opacity-min" alt="Menu">
-    <p class="w3-text-grey">Toto je obrázek ilustrující atmosféru našeho menu. Můžete si všimnout, že v pozadí je elegantní uspořádání stolu, které odráží příjemnou atmosféru restaurace.</p>
-  </div><p class="w3-text-grey">Druhý obrázek ukazuje náš výběr přírodních a zdravých ingrediencí, které používáme v našich pokrmech. Tato fotografie je dokladem našich kvalitních surovin.</p>
-  
-  <!-- Footer -->
-  <footer class="w3-center w3-light-grey w3-padding-32">
-    <p>Studentská práce | 2025</p>
-  </footer>
+    <!-- Footer -->
+    <footer class="w3-center w3-light-grey w3-padding-32">
+        <p>Studentská práce | 2025</p>
+    </footer>
 </body>
 </html>
