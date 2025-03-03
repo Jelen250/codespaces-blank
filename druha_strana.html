@@ -6,54 +6,45 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    
     <style>
-        /* Flexbox styling pro hlavní obsah */
+        /* Flexbox styling for main content */
         .content-container {
             display: flex;
-            justify-content: space-between; /* Mezera mezi levým textem a pravými obrázky */
-            align-items: flex-start; /* Zarovná text a obrázky na začátek */
-            flex-wrap: wrap; /* Umožní přizpůsobení na menších obrazovkách */
-            padding: 0 10%; /* Odsazení 10 % zleva a zprava */
-            box-sizing: border-box;
+            justify-content: space-between; /* Space between left and right sections */
+            flex-wrap: wrap; /* Allow content to wrap on smaller screens */
         }
-        
-        /* Levá sekce (Menu a Drink Menu) */
+
+        /* Left section (menu and drink menu) */
         .menu-section {
-            width: 45%; /* Zabere 45% šířky */
+            width: 50%; /* Take half the width */
             padding: 20px;
-            box-sizing: border-box;
         }
-        
-        /* Pravá sekce (Obrázky) */
+
+        /* Right section (images) */
         .image-container {
-            width: 45%; /* Zabere 45% šířky */
+            width: 50%; /* Take half the width */
             display: flex;
-            flex-direction: column; /* Obrázky budou pod sebou ve sloupci */
-            align-items: center; /* Zarovná obrázky na střed */
-            justify-content: center; /* Vertikální centrování obrázků */
+            flex-direction: column; /* Stack images vertically */
+            align-items: flex-end; /* Align images to the right */
             padding: 20px;
-            box-sizing: border-box;
-            text-align: center; /* Zarovná text pod obrázkem na střed */
         }
-        
-        /* Obrázky budou pod sebou a přizpůsobí se šířce */
+
+        /* Make images responsive */
         .image-container img {
-            width: 100%; /* Obrázky zabírají plnou šířku sekce */
-            height: auto; /* Zachování poměru stran */
-            margin-bottom: 16px; /* Mezera mezi obrázky */
+            width: 100%; /* Adjust image width */
+            margin-bottom: 16px; /* Add space between images */
         }
+        .content-container{
+    margin: 0;
+    padding: 10%;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 10%;
+    box-sizing: border-box;
+}
         
-        /* Responsivita pro menší obrazovky */
-        @media (max-width: 768px) {
-            .content-container {
-                flex-direction: column; /* Na malých obrazovkách půjdou pod sebe */
-                padding: 0 5%; /* Menší odsazení na malých obrazovkách */
-            }
-            .menu-section, .image-container {
-                width: 100%; /* Oba bloky zaberou celou šířku */
-            }
-        }
     </style>
 </head>
 <body>
@@ -69,10 +60,15 @@
         </div>
     </div>
 
-    <!-- Hlavní obsah: Levá sekce pro Menu a Nápojový lístek, Pravá sekce pro Obrázky -->
+    <!-- Main Content: Left section for Menu and Drink Menu, Right section for Images -->
     <div class="content-container">
-        <!-- Levá sekce (Menu) -->
+        <!-- Left section (Menu and Drink Menu) -->
         <div class="menu-section">
+            <!-- Menu Section -->
+            <div class="container">
+                <div class="box"></div>
+                <div class="spacer"></div> <!-- Mezery mezi dvěma boxy -->
+            </div> 
             <h1 class="w3-center">Menu</h1><br>
             <h4>Chlebový košík</h4>
             <p class="w3-text-grey">Sortiment čerstvě pečených ovocných chlebů a muffinů 137,50 Kč</p><br>
@@ -97,7 +93,7 @@
             <h4>Pečené zeleninové quesadillas</h4>
             <p class="w3-text-grey">Tortilla plněná pečenou zeleninou, sýrem a kořením, podávaná s guacamole a jogurtovým dipem. 215,00 Kč</p><br>
 
-            <!-- Sekce nápojového lístku -->
+            <!-- Drink Menu Section -->
             <h1 class="w3-center">Nápojový lístek</h1><br>
             <h4>Fresh pomerančový džus</h4>
             <p class="w3-text-grey">Čerstvě vymačkaný pomerančový džus bez přidaného cukru. 65,00 Kč</p><br>
@@ -111,20 +107,21 @@
             <p class="w3-text-grey">Lahodné latte s japonským zeleným čajem matcha. 95,00 Kč</p><br>
             <h4>Horká čokoláda</h4>
             <p class="w3-text-grey">Božská horká čokoláda s našlehanou smetanou. 90,00 Kč</p><br>
-        </div>
+     </div>
 
-        <!-- Pravá sekce (Obrázky) -->
+        <!-- Right section (Images) -->
         <div class="image-container">
-            <!-- První obrázek vedle Menu -->
             <img src="https://www.w3schools.com/w3images/tablesetting.jpg" class="w3-round w3-image w3-opacity-min" alt="Menu">
             <p class="w3-text-grey">Toto je obrázek ilustrující atmosféru našeho menu. Můžete si všimnout, že v pozadí je elegantní uspořádání stolu, které odráží příjemnou atmosféru restaurace.</p>
-            <!-- Druhý obrázek vedle Nápojového lístku -->
             <img src="https://dobrebio.cz/wp-content/uploads/2020/03/IMG-6376-1536x1152.jpg" class="w3-round w3-image w3-opacity-min" alt="Menu">
             <p class="w3-text-grey">Druhý obrázek ukazuje náš výběr přírodních a zdravých ingrediencí, které používáme v našich pokrmech. Tato fotografie je dokladem našich kvalitních surovin.</p>
-        
         </div>
     </div>
-
+    <div class="container">
+        <div class="box"></div>
+        <div class="spacer"></div> <!-- Mezery mezi dvěma boxy -->
+         </div>
+    
     <!-- Footer -->
     <footer class="w3-center w3-light-grey w3-padding-32">
         <p>Studentská práce | 2025</p>
