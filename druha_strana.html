@@ -8,54 +8,64 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <style>
         /* Flexbox styling for main content */
-.content-container {
-    display: flex;
-    align-items: flex-start; /* Zarovná prvky nahoře */
-    flex-wrap: wrap; /* Umožní přizpůsobení na menších obrazovkách */
-    gap: 20px; /* Mezera mezi textem a obrázky */
-    margin: 0 auto; /* Centrovaný obsah */
-    padding: 0 10%; /* Odsazení 10 % zleva a zprava */
-    box-sizing: border-box;
-    max-width: 80%; /* Zajistí, že obsah nezasahuje do krajů */
-}
+        .content-container {
+            display: flex;
+            align-items: center; /* Vertikální zarovnání do středu */
+            justify-content: center; /* Horizontální zarovnání do středu */
+            flex-wrap: wrap; /* Umožní přizpůsobení na menších obrazovkách */
+            gap: 20px; /* Mezera mezi obrázky a textem */
+            margin: 0 auto; /* Centrovaný obsah */
+            padding: 0 10%; /* Odsazení 10 % zleva a zprava */
+            box-sizing: border-box;
+            max-width: 80%; /* Zajistí, že obsah nezasahuje do krajů */
+        }
 
-/* Levá sekce (menu) */
-.menu-section {
-    width: 50%; /* Zabere polovinu dostupného prostoru */
-    padding: 20px;
-    box-sizing: border-box;
-}
+        /* Sekce pro obrázky a text */
+        .image-text-container {
+            display: flex;
+            align-items: center; /* Vertikální zarovnání do středu */
+            justify-content: space-between; /* Rozmístí obrázky na levé a pravé straně, text uprostřed */
+            width: 100%; /* Zabere celou šířku */
+        }
 
-/* Pravá sekce (obrázky) */
-.image-container {
-    width: 50%; /* Zabere druhou polovinu */
-    display: flex;
-    flex-direction: column; /* Obrázky budou pod sebou */
-    align-items: flex-start; /* Zarovná obrázky nahoře */
-    padding: 20px;
-    box-sizing: border-box;
-}
+        /* Levý obrázek */
+        .left-image {
+            flex: 1;
+            text-align: center; /* Centruje obrázek */
+        }
 
-/* Obrázky budou pod sebou a přizpůsobí se šířce */
-.image-container img {
-    width: 100%; /* Obrázky zabírají plnou šířku sekce */
-    height: auto; /* Zachování poměru stran */
-    margin-bottom: 16px; /* Mezera mezi obrázky */
-}
+        /* Pravý obrázek */
+        .right-image {
+            flex: 1;
+            text-align: center; /* Centruje obrázek */
+        }
 
-/* Responsivita pro menší obrazovky */
-@media (max-width: 768px) {
-    .content-container {
-        flex-direction: column; /* Na malých obrazovkách půjdou pod sebe */
-        max-width: 100%; /* Plná šířka na mobilech */
-        padding: 0 5%; /* Menší odsazení na malých obrazovkách */
-    }
-    .menu-section, .image-container {
-        width: 100%; /* Oba bloky zaberou celou šířku */
-    }
-}
+        /* Sekce pro text */
+        .text-section {
+            flex: 2; /* Zabírá dvakrát více místa než obrázky */
+            text-align: center; /* Text je uprostřed */
+        }
 
-        
+        /* Obrázky */
+        .left-image img, .right-image img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 16px; /* Mezera mezi obrázky */
+        }
+
+        /* Responsivita pro menší obrazovky */
+        @media (max-width: 768px) {
+            .content-container {
+                padding: 0 5%; /* Menší odsazení na malých obrazovkách */
+            }
+            .image-text-container {
+                flex-direction: column; /* Obrázky a text půjdou pod sebe na malých obrazovkách */
+                align-items: center; /* Centrum na malých obrazovkách */
+            }
+            .left-image, .right-image {
+                width: 100%; /* Obrázky budou zabírat celou šířku */
+            }
+        }
     </style>
 </head>
 <body>
@@ -73,66 +83,47 @@
 
     <!-- Main Content: Left section for Menu and Drink Menu, Right section for Images -->
     <div class="content-container">
-        <!-- Left section (Menu and Drink Menu) -->
-        <div class="menu-section">
-            <!-- Menu Section -->
-            <div class="container">
-                <div class="box"></div>
-                <div class="spacer"></div> <!-- Mezery mezi dvěma boxy -->
-            </div> 
-            <h1 class="w3-center">Menu</h1><br>
-            <h4>Chlebový košík</h4>
-            <p class="w3-text-grey">Sortiment čerstvě pečených ovocných chlebů a muffinů 137,50 Kč</p><br>
-            <h4>Medovo-mandlová granola s ovocem</h4>
-            <p class="w3-text-grey">Přírodní cereálie z medem opečených ovesných vloček, rozinek, mandlí a datlí 175,00 Kč</p><br>
-            <h4>Belgická vafle</h4>
-            <p class="w3-text-grey">Vanilkové těsto s ječmennou moukou 187,50 Kč</p><br>
-            <h4>Míchaná vejce</h4>
-            <p class="w3-text-grey">Míchaná vejce s pečenou paprikou a česnekem, se zelenou cibulkou 187,50 Kč</p><br>
-            <h4>Borůvkové palačinky</h4>
-            <p class="w3-text-grey">Se sirupem, máslem a spoustou borůvek 212,50 Kč</p><br>
-            <h4>Avokádový toast</h4>
-            <p class="w3-text-grey">Toust s avokádem, rajčaty, opečenými semínky a olivovým olejem, dochucený citronem a solí. 175,00 Kč</p><br>
-            <h4>Omeleta se šunkou a sýrem</h4>
-            <p class="w3-text-grey">Vaječná omeleta se šunkou, tvrdým sýrem, rajčaty a bylinkami. 195,00 Kč</p><br>
-            <h4>Francouzský toast s ovocem</h4>
-            <p class="w3-text-grey">Opečený toust s kousky čerstvého ovoce, podávaný s javorovým sirupem a šlehačkou. 205,00 Kč</p><br>
-            <h4>Quiche s lososem a špenátem</h4>
-            <p class="w3-text-grey">Křehká kůrka, plněná směsí špenátu, lososa, vajec a smetany. 225,00 Kč</p><br>
-            <h4>Müsli s jogurtem a medem</h4>
-            <p class="w3-text-grey">Domácí müsli s ovesnými vločkami, sušeným ovocem, ořechy a čerstvým jogurtem, pokapáno medem. 165,00 Kč</p><br>
-            <h4>Pečené zeleninové quesadillas</h4>
-            <p class="w3-text-grey">Tortilla plněná pečenou zeleninou, sýrem a kořením, podávaná s guacamole a jogurtovým dipem. 215,00 Kč</p><br>
+        <!-- Image and Text Section -->
+        <div class="image-text-container">
+            <!-- Left Image -->
+            <div class="left-image">
+                <img src="https://www.w3schools.com/w3images/tablesetting.jpg" class="w3-round w3-image w3-opacity-min" alt="Menu">
+            </div>
+            
+            <!-- Text Section -->
+            <div class="text-section">
+                <h1 class="w3-center">Menu</h1><br>
+                <h4>Chlebový košík</h4>
+                <p class="w3-text-grey">Sortiment čerstvě pečených ovocných chlebů a muffinů 137,50 Kč</p><br>
+                <h4>Medovo-mandlová granola s ovocem</h4>
+                <p class="w3-text-grey">Přírodní cereálie z medem opečených ovesných vloček, rozinek, mandlí a datlí 175,00 Kč</p><br>
+                <h4>Belgická vafle</h4>
+                <p class="w3-text-grey">Vanilkové těsto s ječmennou moukou 187,50 Kč</p><br>
+                <h4>Míchaná vejce</h4>
+                <p class="w3-text-grey">Míchaná vejce s pečenou paprikou a česnekem, se zelenou cibulkou 187,50 Kč</p><br>
+                <h4>Borůvkové palačinky</h4>
+                <p class="w3-text-grey">Se sirupem, máslem a spoustou borůvek 212,50 Kč</p><br>
+                <h4>Avokádový toast</h4>
+                <p class="w3-text-grey">Toust s avokádem, rajčaty, opečenými semínky a olivovým olejem, dochucený citronem a solí. 175,00 Kč</p><br>
+                <h4>Omeleta se šunkou a sýrem</h4>
+                <p class="w3-text-grey">Vaječná omeleta se šunkou, tvrdým sýrem, rajčaty a bylinkami. 195,00 Kč</p><br>
+                <h4>Francouzský toast s ovocem</h4>
+                <p class="w3-text-grey">Opečený toust s kousky čerstvého ovoce, podávaný s javorovým sirupem a šlehačkou. 205,00 Kč</p><br>
+                <h4>Quiche s lososem a špenátem</h4>
+                <p class="w3-text-grey">Křehká kůrka, plněná směsí špenátu, lososa, vajec a smetany. 225,00 Kč</p><br>
+                <h4>Müsli s jogurtem a medem</h4>
+                <p class="w3-text-grey">Domácí müsli s ovesnými vločkami, sušeným ovocem, ořechy a čerstvým jogurtem, pokapáno medem. 165,00 Kč</p><br>
+                <h4>Pečené zeleninové quesadillas</h4>
+                <p class="w3-text-grey">Tortilla plněná pečenou zeleninou, sýrem a kořením, podávaná s guacamole a jogurtovým dipem. 215,00 Kč</p><br>
+            </div>
 
-            <!-- Drink Menu Section -->
-            <h1 class="w3-center">Nápojový lístek</h1><br>
-            <h4>Fresh pomerančový džus</h4>
-            <p class="w3-text-grey">Čerstvě vymačkaný pomerančový džus bez přidaného cukru. 65,00 Kč</p><br>
-            <h4>Kokosová limonáda</h4>
-            <p class="w3-text-grey">Osvěžující kokosová voda s limetkou a trochou medu. 75,00 Kč</p><br>
-            <h4>Ledový čaj s citronem</h4>
-            <p class="w3-text-grey">Domácí ledový čaj s citronem a čerstvou mátou. 70,00 Kč</p><br>
-            <h4>Káva cappuccino</h4>
-            <p class="w3-text-grey">Krémové cappuccino s našlehaným mlékem. 85,00 Kč</p><br>
-            <h4>Matcha latte</h4>
-            <p class="w3-text-grey">Lahodné latte s japonským zeleným čajem matcha. 95,00 Kč</p><br>
-            <h4>Horká čokoláda</h4>
-            <p class="w3-text-grey">Božská horká čokoláda s našlehanou smetanou. 90,00 Kč</p><br>
-     </div>
-
-        <!-- Right section (Images) -->
-        <div class="image-container">
-            <img src="https://www.w3schools.com/w3images/tablesetting.jpg" class="w3-round w3-image w3-opacity-min" alt="Menu">
-            <p class="w3-text-grey">Toto je obrázek ilustrující atmosféru našeho menu. Můžete si všimnout, že v pozadí je elegantní uspořádání stolu, které odráží příjemnou atmosféru restaurace.</p>
-            <img src="https://dobrebio.cz/wp-content/uploads/2020/03/IMG-6376-1536x1152.jpg" class="w3-round w3-image w3-opacity-min" alt="Menu">
-            <p class="w3-text-grey">Druhý obrázek ukazuje náš výběr přírodních a zdravých ingrediencí, které používáme v našich pokrmech. Tato fotografie je dokladem našich kvalitních surovin.</p>
+            <!-- Right Image -->
+            <div class="right-image">
+                <img src="https://dobrebio.cz/wp-content/uploads/2020/03/IMG-6376-1536x1152.jpg" class="w3-round w3-image w3-opacity-min" alt="Menu">
+            </div>
         </div>
     </div>
-    <div class="container">
-        <div class="box"></div>
-        <div class="spacer"></div> <!-- Mezery mezi dvěma boxy -->
-         </div>
-    
+
     <!-- Footer -->
     <footer class="w3-center w3-light-grey w3-padding-32">
         <p>Studentská práce | 2025</p>
