@@ -7,28 +7,26 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <style>
-    /* Flexbox styling for main content */
+   /* Flexbox styling for main content */
 .content-container {
     display: flex;
+    justify-content: space-between; /* Mezera mezi levým textem a pravými obrázky */
     align-items: flex-start; /* Zarovná text a obrázky na začátek */
     flex-wrap: wrap; /* Umožní přizpůsobení na menších obrazovkách */
-    gap: 20px; /* Mezera mezi textem a obrázky */
-    margin: 0 auto; /* Centrovaný obsah */
     padding: 0 10%; /* Odsazení 10 % zleva a zprava */
     box-sizing: border-box;
-    max-width: 100%; /* Zajistí, že obsah zabere 100% šířky */
 }
 
 /* Levá sekce (menu) */
 .menu-section {
-    width: 50%; /* Zabere polovinu šířky */
+    width: 45%; /* Zabere 45% šířky */
     padding: 20px;
     box-sizing: border-box;
 }
 
 /* Pravá sekce (obrázky) */
 .image-container {
-    width: 50%; /* Zabere druhou polovinu šířky */
+    width: 45%; /* Zabere 45% šířky */
     display: flex;
     flex-direction: column; /* Obrázky budou pod sebou ve sloupci */
     align-items: flex-start; /* Zarovná obrázky na začátek */
@@ -47,13 +45,13 @@
 @media (max-width: 768px) {
     .content-container {
         flex-direction: column; /* Na malých obrazovkách půjdou pod sebe */
-        max-width: 100%; /* Zabere celou šířku */
         padding: 0 5%; /* Menší odsazení na malých obrazovkách */
     }
     .menu-section, .image-container {
         width: 100%; /* Oba bloky zaberou celou šířku */
     }
 }
+
  </style>
 </head>
 <body>
