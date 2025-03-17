@@ -12,7 +12,7 @@
             display: flex;
             align-items: flex-start; /* Zarovná prvky nahoře */
             gap: 20px; /* Mezera mezi textem a obrázky */
-            padding: 0 10%; /* Odsazení 10 % zleva a zprava */
+            padding: 20px; /* Padding na všechny strany */
             box-sizing: border-box;
             max-width: 100%; /* Zajistí, že obsah nebude zasahovat do krajů */
         }
@@ -20,8 +20,9 @@
         /* Levá sekce (menu) */
         .menu-section {
             flex: 1; /* Zabere všechny dostupné místo, kromě prostoru pro obrázky */
-            padding: 20px;
+            padding: 20px; /* Padding uvnitř sekce */
             box-sizing: border-box;
+            overflow-y: auto; /* Umožní scrollování, pokud text nevměstná do sekce */
         }
 
         /* Pravá sekce (obrázky) */
@@ -30,7 +31,7 @@
             display: flex;
             flex-direction: column; /* Obrázky budou pod sebou */
             gap: 16px; /* Mezera mezi obrázky */
-            padding: 20px;
+            padding: 20px; /* Padding uvnitř sekce */
             box-sizing: border-box;
         }
 
